@@ -12,7 +12,6 @@ rutas.get("/mostrarProductos",async (req,res) =>{;
 
 rutas.get("/buscarProductoPorId/:id", async(req,res) => {
     var productoValido = await buscarPorID(req.params.id)
-    //console.log (usuarioValido);
     res.json(productoValido);
     
 });

@@ -10,7 +10,6 @@ rutas.get("/",async (req,res) =>{
 
 rutas.get("/buscarUsuarioPorId/:id", async(req,res) => {
     var usuarioValido = await buscarPorID(req.params.id)
-    //console.log (usuarioValido);
     res.json(usuarioValido);
     
 });

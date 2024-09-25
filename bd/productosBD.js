@@ -14,7 +14,6 @@ function validarDatos(producto){
 
 async function mostrarProductos(){
     const productos = await productosBD.get();
-    //console.log(usuarios.id);
     productosValidos = [];
     productos.forEach( producto => {
         const producto1 = new Producto({ id: producto.id,...producto.data()});
@@ -23,12 +22,11 @@ async function mostrarProductos(){
         }
         
     });
-    // console.log(usuariosValidos);
+   
     return productosValidos;
     
 }
 
-// mostrarUsuarios();
 
 
 async function buscarPorID(id) {
@@ -38,20 +36,16 @@ async function buscarPorID(id) {
     if (validarDatos(producto1.getProducto)) {
         productoValido=producto1.getProducto;
     }
-    //console.log(usuarioValido);
     return productoValido;
 }
 
-
-
-//buscarPorID("6UCKH0nCyIjQrCsyZrJ4");
 
 async function nuevoProducto(data) {
     console.log(data);
     
   
     const producto1=new Producto(data);
-    //console.log(usuario1.getUsuario);
+
     var productoValido=false;
     if (validarDatos(producto1.getProducto)) {
         await productosBD.doc().set(producto1.getProducto);
