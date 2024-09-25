@@ -8,7 +8,7 @@ var saludo=(req, res, next)=>{
 }
 
 app.get("/home",saludo,(req,res)=>{
-    res.send("HOLA ESTAAS ENN HOME");
+    res.send("Hola Home");
 });
 
 
