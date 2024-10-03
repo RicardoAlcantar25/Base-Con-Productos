@@ -57,7 +57,7 @@ async function nuevaCompra(data) {
     const datosCompra = compras1.getCompras;
 
     if (validarDatos(datosCompra)) {
-        // Firestore generará un ID automáticamente
+
         await comprasBD.doc().set(datosCompra);
         comprasValidas = true;
     }
